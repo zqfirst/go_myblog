@@ -1,6 +1,63 @@
 {
 	"comment": "",
 	"ignore": "test",
-	"package": [],
+	"package": [
+		{
+			"checksumSHA1": "RsNwOto8G8aXIiRrlFn4dtU9q/g=",
+			"path": "github.com/gin-gonic/gin",
+			"revision": "e2212d40c62a98b388a5eb48ecbdcf88534688ba",
+			"revisionTime": "2016-12-04T22:13:08Z",
+			"version": "v1.1.4",
+			"versionExact": "v1.1.4"
+		},
+		{
+			"checksumSHA1": "UsILDoIB2S7ra+w2fMdb85mX3HM=",
+			"path": "github.com/gin-gonic/gin/binding",
+			"revision": "e2212d40c62a98b388a5eb48ecbdcf88534688ba",
+			"revisionTime": "2016-12-04T22:13:08Z",
+			"version": "v1.1.4",
+			"versionExact": "v1.1.4"
+		},
+		{
+			"checksumSHA1": "PHv9FNb7YavJWtAHcY6ZgXmkmHs=",
+			"path": "github.com/gin-gonic/gin/render",
+			"revision": "e2212d40c62a98b388a5eb48ecbdcf88534688ba",
+			"revisionTime": "2016-12-04T22:13:08Z",
+			"version": "v1.1.4",
+			"versionExact": "v1.1.4"
+		},
+		{
+			"path": "github.com/golang/protobuf/proto",
+			"revision": ""
+		},
+		{
+			"checksumSHA1": "b0T0Hzd+zYk+OCDTFMps+jwa/nY=",
+			"path": "github.com/manucorporat/sse",
+			"revision": "ee05b128a739a0fb76c7ebd3ae4810c1de808d6d",
+			"revisionTime": "2016-01-26T18:01:36Z"
+		},
+		{
+			"checksumSHA1": "C3Xbt5Nq5Wez3B5cyi8vQlVkP1g=",
+			"path": "github.com/mattn/go-isatty",
+			"revision": "bf9a1dea1961e1d831824fb135332bfb8c10e8b8",
+			"revisionTime": "2019-08-18T12:36:53Z"
+		},
+		{
+			"path": "golang.org/x/net/context",
+			"revision": ""
+		},
+		{
+			"path": "golang.org/x/sys/unix",
+			"revision": ""
+		},
+		{
+			"path": "gopkg.in/go-playground/validator.v8",
+			"revision": ""
+		},
+		{
+			"path": "gopkg.in/yaml.v2",
+			"revision": ""
+		}
+	],
 	"rootPath": "myblog_go"
 }
