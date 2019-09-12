@@ -2,11 +2,11 @@ package main
 
 import (
 	"myblog_go/routers"
-	_ "myblog_go/services"
+	"myblog_go/services/setting"
 )
 
 func main() {
 	r := routers.SetRoute()
-
-	r.Run() // listen and serve on 0.0.0.0:8080
+	port := setting.GetConfig("HTTP", "port")
+	r.Run("127.0.0.1:" + port) // listen and serve on 0.0.0.0:8080
 }

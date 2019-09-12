@@ -1,9 +1,9 @@
 package setting
 
 import (
-	"flag"
 	"fmt"
-	"github.com/larspensjo/config"
+	"github.com/Unknwon/goconfig"
+	"os"
 )
 
 type Http struct {
@@ -17,15 +17,22 @@ type Db struct {
 	pass string
 }
 
-var (
-	configFile = flag.String("configfile", "config.ini", "General configuration file")
-)
+var cfg *goconfig.ConfigFile
 
-func Init() {
-	SetConfig(*configFile);
+func init() {
+	config, err := goconfig.LoadConfigFile("conf/config.ini") //加载配置文件
+	if err != nil {
+		fmt.Println("get config file error")
+		os.Exit(-1)
+	}
+	cfg = config
 }
 
-func SetConfig(c string) {
-	configInfo, _ := config.ReadDefault(c);
-	fmt.Print(configInfo);
+func GetConfig(sec string, key string) (val string) {
+	if cfg == nil {
+		return val;
+	}
+
+	val, _ = cfg.GetValue(sec, key)
+	return val
 }
