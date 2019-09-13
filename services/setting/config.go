@@ -10,14 +10,9 @@ type Http struct {
 	port string
 }
 
-type Db struct {
-	host string
-	port string
-	user string
-	pass string
-}
-
-var cfg *goconfig.ConfigFile
+var (
+	cfg      *goconfig.ConfigFile
+)
 
 func init() {
 	config, err := goconfig.LoadConfigFile("conf/config.ini") //加载配置文件
@@ -36,3 +31,4 @@ func GetConfig(sec string, key string) (val string) {
 	val, _ = cfg.GetValue(sec, key)
 	return val
 }
+

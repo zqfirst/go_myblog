@@ -3,6 +3,7 @@ package main
 import (
 	"myblog_go/routers"
 	"myblog_go/services/setting"
+	_ "myblog_go/models"
 )
 
 func main() {
