@@ -1,4 +1,4 @@
-{{define "admin/index/login.tpl"}}
+{{define "login"}}
 <!DOCTYPE html>
 <html>
 <head>
@@ -95,10 +95,10 @@
                 layer.msg('密码不能为空');
                 return false;
             }
-            if (data.captcha == '') {
+            /*if (data.captcha == '') {
                 layer.msg('验证码不能为空');
                 return false;
-            }
+            }*/
             layer.msg('登录成功', function () {
                 window.location = '/index.html';
             });

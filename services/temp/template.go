@@ -7,5 +7,5 @@ import (
 )
 
 func SetTep(view string) {
-	ginS.SetHTMLTemplate(template.Must(template.ParseFiles(consts.ADMIN_BASE_MAIN, consts.ADMIN_TEMLATES + view + ".tpl")))
+	ginS.SetHTMLTemplate(template.Must(template.ParseFiles(consts.ADMIN_BASE_MAIN, consts.ADMIN_TEMLATES + view + ".html")))
 }

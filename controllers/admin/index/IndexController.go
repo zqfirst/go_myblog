@@ -12,5 +12,5 @@ func Index(c *gin.Context) {
 }
 
 func Login(c *gin.Context) {
-	c.HTML(http.StatusOK, "admin/index/login.tpl", "{}");
+	c.HTML(http.StatusOK, "login", "{}");
 }
