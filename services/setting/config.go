@@ -11,7 +11,7 @@ type Http struct {
 }
 
 var (
-	cfg      *goconfig.ConfigFile
+	cfg *goconfig.ConfigFile
 )
 
 func init() {
@@ -32,3 +32,6 @@ func GetConfig(sec string, key string) (val string) {
 	return val
 }
 
+func GetSessionKey() (key string) {
+	return GetConfig("session", "key")
+}

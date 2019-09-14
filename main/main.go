@@ -1,9 +1,9 @@
 package main
 
 import (
+	_ "myblog_go/models"
 	"myblog_go/routers"
 	"myblog_go/services/setting"
-	_ "myblog_go/models"
 )
 
 func main() {

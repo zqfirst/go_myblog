@@ -36,7 +36,7 @@
 <div class="layui-container">
     <div class="admin-login-background">
         <div class="layui-form login-form">
-            <form class="layui-form" action="">
+            <form class="layui-form" action="javascript:;">
                 <div class="layui-form-item logo-title">
                     <h1>LayuiMini后台登录</h1>
                 </div>
@@ -99,10 +99,14 @@
                 layer.msg('验证码不能为空');
                 return false;
             }*/
-            layer.msg('登录成功', function () {
-                window.location = '/index.html';
-            });
-            return false;
+            $.post("/admin/login",data,function (res) {
+                if (res.status == 200){
+                    layer.msg('登录成功', function () {
+                        window.location = '/admin';
+                    });
+                }
+            })
+
         });
     });
 </script>
